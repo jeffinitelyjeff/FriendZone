@@ -8,11 +8,18 @@
 
 import UIKit
 
-class FZFriendZoneViewController: UITableViewController {
+class FZFriendListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var tableView: UITableView!
+
     let personStore = FZPersonStore.sharedInstance
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func viewDidLoad() {
+        tableView.delegate = self
+        tableView.dataSource = self
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
             return 1
@@ -23,7 +30,7 @@ class FZFriendZoneViewController: UITableViewController {
         }
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "FZFriendZoneViewController")
         switch (indexPath.section, indexPath.row) {
         case (0, 0):
@@ -37,6 +44,9 @@ class FZFriendZoneViewController: UITableViewController {
             return cell
         }
     }
-
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 2
+    }
 }
 

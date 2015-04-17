@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		182B9EFC1AE079C00058876D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182B9EFB1AE079C00058876D /* AppDelegate.swift */; };
-		182B9EFE1AE079C00058876D /* FZFriendZoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182B9EFD1AE079C00058876D /* FZFriendZoneViewController.swift */; };
+		182B9EFE1AE079C00058876D /* FZFriendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182B9EFD1AE079C00058876D /* FZFriendListViewController.swift */; };
 		182B9F011AE079C00058876D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182B9EFF1AE079C00058876D /* Main.storyboard */; };
 		182B9F031AE079C00058876D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 182B9F021AE079C00058876D /* Images.xcassets */; };
 		182B9F061AE079C00058876D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182B9F041AE079C00058876D /* LaunchScreen.xib */; };
 		182B9F121AE079C00058876D /* FriendZoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182B9F111AE079C00058876D /* FriendZoneTests.swift */; };
 		182B9F1C1AE0826D0058876D /* FZPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182B9F1B1AE0826D0058876D /* FZPerson.swift */; };
 		182B9F1E1AE082930058876D /* FZPersonStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182B9F1D1AE082930058876D /* FZPersonStore.swift */; };
+		182B9F201AE0BBC30058876D /* FZFriendListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182B9F1F1AE0BBC30058876D /* FZFriendListCell.xib */; };
+		182B9F251AE0C3E00058876D /* FZFriendListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182B9F241AE0C3E00058876D /* FZFriendListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +33,7 @@
 		182B9EF61AE079C00058876D /* FriendZone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FriendZone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		182B9EFA1AE079C00058876D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		182B9EFB1AE079C00058876D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		182B9EFD1AE079C00058876D /* FZFriendZoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FZFriendZoneViewController.swift; sourceTree = "<group>"; };
+		182B9EFD1AE079C00058876D /* FZFriendListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FZFriendListViewController.swift; sourceTree = "<group>"; };
 		182B9F001AE079C00058876D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		182B9F021AE079C00058876D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		182B9F051AE079C00058876D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -40,6 +42,8 @@
 		182B9F111AE079C00058876D /* FriendZoneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendZoneTests.swift; sourceTree = "<group>"; };
 		182B9F1B1AE0826D0058876D /* FZPerson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FZPerson.swift; sourceTree = "<group>"; };
 		182B9F1D1AE082930058876D /* FZPersonStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FZPersonStore.swift; sourceTree = "<group>"; };
+		182B9F1F1AE0BBC30058876D /* FZFriendListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FZFriendListCell.xib; sourceTree = "<group>"; };
+		182B9F241AE0C3E00058876D /* FZFriendListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FZFriendListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +85,9 @@
 		182B9EF81AE079C00058876D /* FriendZone */ = {
 			isa = PBXGroup;
 			children = (
-				182B9EFD1AE079C00058876D /* FZFriendZoneViewController.swift */,
-				182B9F1B1AE0826D0058876D /* FZPerson.swift */,
-				182B9F1D1AE082930058876D /* FZPersonStore.swift */,
-				182B9EFF1AE079C00058876D /* Main.storyboard */,
+				182B9F231AE0BC2E0058876D /* Controller */,
+				182B9F221AE0BC290058876D /* View */,
+				182B9F211AE0BC170058876D /* Model */,
 				182B9EF91AE079C00058876D /* Supporting Files */,
 			);
 			path = FriendZone;
@@ -116,6 +119,33 @@
 				182B9F101AE079C00058876D /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		182B9F211AE0BC170058876D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				182B9F1B1AE0826D0058876D /* FZPerson.swift */,
+				182B9F1D1AE082930058876D /* FZPersonStore.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		182B9F221AE0BC290058876D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				182B9EFF1AE079C00058876D /* Main.storyboard */,
+				182B9F241AE0C3E00058876D /* FZFriendListCell.swift */,
+				182B9F1F1AE0BBC30058876D /* FZFriendListCell.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		182B9F231AE0BC2E0058876D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				182B9EFD1AE079C00058876D /* FZFriendListViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				182B9F011AE079C00058876D /* Main.storyboard in Resources */,
+				182B9F201AE0BBC30058876D /* FZFriendListCell.xib in Resources */,
 				182B9F061AE079C00058876D /* LaunchScreen.xib in Resources */,
 				182B9F031AE079C00058876D /* Images.xcassets in Resources */,
 			);
@@ -218,10 +249,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				182B9EFE1AE079C00058876D /* FZFriendZoneViewController.swift in Sources */,
+				182B9EFE1AE079C00058876D /* FZFriendListViewController.swift in Sources */,
 				182B9EFC1AE079C00058876D /* AppDelegate.swift in Sources */,
 				182B9F1E1AE082930058876D /* FZPersonStore.swift in Sources */,
 				182B9F1C1AE0826D0058876D /* FZPerson.swift in Sources */,
+				182B9F251AE0C3E00058876D /* FZFriendListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
