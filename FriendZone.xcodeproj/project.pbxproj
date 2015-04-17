@@ -17,6 +17,9 @@
 		182B9F1E1AE082930058876D /* FZPersonStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182B9F1D1AE082930058876D /* FZPersonStore.swift */; };
 		182B9F201AE0BBC30058876D /* FZFriendListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182B9F1F1AE0BBC30058876D /* FZFriendListCell.xib */; };
 		182B9F251AE0C3E00058876D /* FZFriendListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182B9F241AE0C3E00058876D /* FZFriendListCell.swift */; };
+		182B9F271AE0D0A20058876D /* FZDateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182B9F261AE0D0A20058876D /* FZDateUtils.swift */; };
+		182B9F2A1AE0F55A0058876D /* sampleNames.txt in Resources */ = {isa = PBXBuildFile; fileRef = 182B9F291AE0F55A0058876D /* sampleNames.txt */; };
+		182B9F2C1AE0F70C0058876D /* FZUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182B9F2B1AE0F70C0058876D /* FZUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		182B9F1D1AE082930058876D /* FZPersonStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FZPersonStore.swift; sourceTree = "<group>"; };
 		182B9F1F1AE0BBC30058876D /* FZFriendListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FZFriendListCell.xib; sourceTree = "<group>"; };
 		182B9F241AE0C3E00058876D /* FZFriendListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FZFriendListCell.swift; sourceTree = "<group>"; };
+		182B9F261AE0D0A20058876D /* FZDateUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FZDateUtils.swift; sourceTree = "<group>"; };
+		182B9F291AE0F55A0058876D /* sampleNames.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sampleNames.txt; sourceTree = "<group>"; };
+		182B9F2B1AE0F70C0058876D /* FZUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FZUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,8 +91,8 @@
 		182B9EF81AE079C00058876D /* FriendZone */ = {
 			isa = PBXGroup;
 			children = (
-				182B9F231AE0BC2E0058876D /* Controller */,
-				182B9F221AE0BC290058876D /* View */,
+				182B9EFF1AE079C00058876D /* Main.storyboard */,
+				182B9F281AE0EDED0058876D /* FriendList */,
 				182B9F211AE0BC170058876D /* Model */,
 				182B9EF91AE079C00058876D /* Supporting Files */,
 			);
@@ -96,6 +102,7 @@
 		182B9EF91AE079C00058876D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				182B9F291AE0F55A0058876D /* sampleNames.txt */,
 				182B9EFB1AE079C00058876D /* AppDelegate.swift */,
 				182B9F021AE079C00058876D /* Images.xcassets */,
 				182B9F041AE079C00058876D /* LaunchScreen.xib */,
@@ -124,28 +131,22 @@
 		182B9F211AE0BC170058876D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				182B9F2B1AE0F70C0058876D /* FZUtils.swift */,
+				182B9F261AE0D0A20058876D /* FZDateUtils.swift */,
 				182B9F1B1AE0826D0058876D /* FZPerson.swift */,
 				182B9F1D1AE082930058876D /* FZPersonStore.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
 		};
-		182B9F221AE0BC290058876D /* View */ = {
-			isa = PBXGroup;
-			children = (
-				182B9EFF1AE079C00058876D /* Main.storyboard */,
-				182B9F241AE0C3E00058876D /* FZFriendListCell.swift */,
-				182B9F1F1AE0BBC30058876D /* FZFriendListCell.xib */,
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
-		182B9F231AE0BC2E0058876D /* Controller */ = {
+		182B9F281AE0EDED0058876D /* FriendList */ = {
 			isa = PBXGroup;
 			children = (
 				182B9EFD1AE079C00058876D /* FZFriendListViewController.swift */,
+				182B9F241AE0C3E00058876D /* FZFriendListCell.swift */,
+				182B9F1F1AE0BBC30058876D /* FZFriendListCell.xib */,
 			);
-			name = Controller;
+			name = FriendList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,6 +229,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				182B9F2A1AE0F55A0058876D /* sampleNames.txt in Resources */,
 				182B9F011AE079C00058876D /* Main.storyboard in Resources */,
 				182B9F201AE0BBC30058876D /* FZFriendListCell.xib in Resources */,
 				182B9F061AE079C00058876D /* LaunchScreen.xib in Resources */,
@@ -250,10 +252,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				182B9EFE1AE079C00058876D /* FZFriendListViewController.swift in Sources */,
+				182B9F271AE0D0A20058876D /* FZDateUtils.swift in Sources */,
 				182B9EFC1AE079C00058876D /* AppDelegate.swift in Sources */,
 				182B9F1E1AE082930058876D /* FZPersonStore.swift in Sources */,
 				182B9F1C1AE0826D0058876D /* FZPerson.swift in Sources */,
 				182B9F251AE0C3E00058876D /* FZFriendListCell.swift in Sources */,
+				182B9F2C1AE0F70C0058876D /* FZUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

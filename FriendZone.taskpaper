@@ -1,0 +1,12 @@
+- update time
+- add buttons to change simulated time
+- get adding new friends working
+- add news friends from Twitter
+- get saving/loading working
+- friend detail view
+
+Maybe:
+- use more sophisticated model?
+Archive:
+	- Fix portrait design of table view cells @done
+	- populate friend list with hundred random friends @done

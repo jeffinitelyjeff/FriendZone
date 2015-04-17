@@ -17,20 +17,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TIME" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocQ-ea-IuB">
+                                <rect key="frame" x="249" y="30" width="103" height="48"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="WNP-wz-Gs3">
-                                <rect key="frame" x="16" y="70" width="568" height="530"/>
+                                <rect key="frame" x="1" y="88" width="598" height="512"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="WNP-wz-Gs3" firstAttribute="top" secondItem="ocQ-ea-IuB" secondAttribute="bottom" constant="10" id="5X1-wV-chh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ocQ-ea-IuB" secondAttribute="trailing" constant="10" id="6gK-eB-llX"/>
                             <constraint firstItem="WNP-wz-Gs3" firstAttribute="top" secondItem="3Mp-VR-9NQ" secondAttribute="bottom" constant="50" id="6oY-KA-79m"/>
-                            <constraint firstItem="WNP-wz-Gs3" firstAttribute="leading" secondItem="CB0-7K-VuT" secondAttribute="leadingMargin" id="a6S-Wc-E2T"/>
+                            <constraint firstAttribute="centerX" secondItem="ocQ-ea-IuB" secondAttribute="centerX" id="9KI-JB-xGA"/>
+                            <constraint firstItem="WNP-wz-Gs3" firstAttribute="top" secondItem="3Mp-VR-9NQ" secondAttribute="bottom" constant="10" id="BVp-lC-g1D"/>
+                            <constraint firstItem="ocQ-ea-IuB" firstAttribute="top" secondItem="3Mp-VR-9NQ" secondAttribute="bottom" constant="10" id="My6-Tj-L0H"/>
+                            <constraint firstItem="WNP-wz-Gs3" firstAttribute="leading" secondItem="CB0-7K-VuT" secondAttribute="leadingMargin" constant="-16" id="XDm-D9-p3T"/>
+                            <constraint firstItem="WNP-wz-Gs3" firstAttribute="leading" secondItem="CB0-7K-VuT" secondAttribute="leadingMargin" constant="-15" id="a6S-Wc-E2T"/>
                             <constraint firstAttribute="bottomMargin" secondItem="WNP-wz-Gs3" secondAttribute="bottom" id="egE-UY-o0u"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="WNP-wz-Gs3" secondAttribute="trailing" id="x69-Oh-Hrp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WNP-wz-Gs3" secondAttribute="trailing" constant="-15" id="x69-Oh-Hrp"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="6oY-KA-79m"/>
+                                <exclude reference="BVp-lC-g1D"/>
+                                <exclude reference="XDm-D9-p3T"/>
+                                <exclude reference="6gK-eB-llX"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="WNP-wz-Gs3" id="Wix-rM-TbP"/>
+                        <outlet property="userTimeLabel" destination="ocQ-ea-IuB" id="kNX-Xr-gW4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Cb-tC-mk5" userLabel="First Responder" sceneMemberID="firstResponder"/>

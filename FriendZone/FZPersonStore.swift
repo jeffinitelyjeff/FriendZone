@@ -11,15 +11,22 @@ import Foundation
 private let _FZPersonStoreSharedInstance = FZPersonStore()
 
 class FZPersonStore {
-    var personArray = Array<FZPerson>()
+    var personArray: Array<FZPerson> = []
     
     class var sharedInstance: FZPersonStore {
         return _FZPersonStoreSharedInstance
     }
     
     init() {
-        personArray.append(FZPerson(name: "Jeff", twitterHandle: "jeffinitelyjeff", timeZoneName: "America/Los_Angeles"))
-        personArray.append(FZPerson(name: "Andrew", twitterHandle: "andrewjclark", timeZoneName: "Australia/Adelaide"))
+        let namesPath = NSBundle.mainBundle().pathForResource("sampleNames", ofType: "txt")
+        var namesText = String(contentsOfFile: namesPath!, encoding: NSUTF8StringEncoding, error: nil)
+        var names = split(namesText!) {$0 == "\n"}
+        
+        for index in 0...100 {
+            let name = randomElement(names)
+            let location = randomElement(knownTimeZones)
+            personArray.append(FZPerson(name: name, twitterHandle: name, location: location))
+        }
     }
     
     func count() -> Int {
